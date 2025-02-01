@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Courriers</title>
+    <link rel="icon" href="logo.png" type="image/png">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Lien vers le fichier CSS externe -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style="box-shadow: 10px 10px 5px #888888;">
+        <div class="container">
+            <a class="navbar-brand" href="#" onclick="showSection('home')">
+                <img src="logo.png" alt="logoDeSite" style="height:50px; width:60px; margin-top:0px" /> InOut
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item" style="background-color: white;">
+                        <a class="nav-link" href="#" onclick="showSection('home')" style="font-size: 17px;">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('login')" style="font-size: 17px;">Se Connecter</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mailto:contact@example.com" style="font-size: 17px;">Nous Contacter</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container main-content">
+        <!-- Section Accueil -->
+        <div id="home" class="section">
+            <div class="text-center">
+                <img src="image.png" alt="Entreprise Image" class="img-fluid" style="width: 400px;">
+                <p class="mt-3">
+                    <b style="color:#000000;font-size: 24px;">Bienvenue</b> <br><br><br> Bienvenue sur notre site de gestion de courriers, où l'efficacité et la simplicité sont à l'honneur. Nous sommes ravis de vous accueillir dans notre espace dédié
+                    à l'optimisation de la gestion de votre correspondance professionnelle et personnelle.
+                    <br><br> Notre plateforme est conçue pour vous offrir une expérience utilisateur fluide et intuitive, vous permettant de gérer, suivre et archiver vos courriers en toute simplicité. Que vous soyez un particulier ou une entreprise,
+                    notre solution s'adapte à vos besoins spécifiques pour vous faire gagner du temps et améliorer votre productivité.
+                    <br><br> Explorez nos fonctionnalités innovantes et découvrez comment nous pouvons transformer la gestion de vos courriers en une tâche facile et agréable. Notre équipe de support est également à votre disposition pour vous accompagner
+                    et répondre à toutes vos questions.
+                    <br><br> Merci de nous faire confiance. Ensemble, simplifions la gestion de vos courriers !
+                </p>
+            </div>
+            <br><br>
+            <div>
+                <b style="color:#000000;font-size: 24px;">À propos de nous</b>
+                <br><br>
+                <p>
+                    Notre site de gestion de courriers est le fruit de notre passion pour l'innovation et de notre détermination à simplifier la vie quotidienne. Avec une équipe d'étudiants ingénieurs motivés, nous avons créé une plateforme conviviale qui rend la gestion
+                    de la correspondance aussi facile que de dire bonjour. Notre projet repose sur des valeurs de simplicité, d'efficacité et de convivialité. Nous sommes fiers de proposer une solution qui non seulement facilite la gestion des courriers,
+                    mais qui crée également une expérience agréable pour nos utilisateurs. Rejoignez-nous dans cette aventure et simplifions ensemble la gestion des courriers pour tous.
+                </p>
+            </div>
+            <div class="row text-center mt-5" style="background-color: #f8f8f5; border-radius:50px; padding-top: 20px; box-shadow: 10px 10px 5px #888888;">
+                <div class="col-md-4">
+                    <h5>Adresse</h5>
+                    <p>123 Rue Principale, Ville, Maroc</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Email</h5>
+                    <p>contact@gestiondecourriers.com</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Nous suivre</h5>
+                    <p class="social-icons">
+                        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section À Propos de Nous -->
+        <div id="about" class="section">
+            <h2>À Propos de Nous</h2>
+            <p>Nous sommes une entreprise spécialisée dans la gestion de courriers, offrant des solutions efficaces pour gérer vos communications professionnelles.</p>
+        </div>
+
+        <!-- Section Se Connecter -->
+        <div id="login" class="section">
+            <h2>Se Connecter</h2>
+            <form onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label for="username">Nom et Prénom:</label>
+                    <input type="text" class="form-control" id="username" placeholder="Entrez votre nom et prénom" required>
+                </div>
+                <div class="form-group">
+                    <label for="role">Rôle:</label>
+                    <select class="form-control" id="role">
+            <option>Admin</option>
+            <option>Utilisateur</option>
+            <option>Secrétaire</option>
+          </select>
+                </div>
+                <div class="form-group">
+                    <label for="password">Mot de passe:</label>
+                    <input type="password" class="form-control" id="password" placeholder="Entrez votre mot de passe" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Se Connecter</button>
+            </form>
+        </div>
+
+        <!-- Section Administrateur -->
+        <div id="admin" class="section">
+            <div class="sidebar">
+                <h4>Menu Administrateur</h4>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showAddMailForm()">Ajouter un nouveau courrier</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Boîte de réception</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showArchive()">Courriers archivés</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Courriers affectés</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('addUserForm')">Ajouter un utilisateur</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('manageUsers')">Gestion des utilisateurs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-danger" href="#" onclick="logout()">Se Déconnecter</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="content">
+                <h1 id="welcomeAdmin">Bienvenue Administrateur</h1>
+                <button class="btn btn-primary" onclick="showAddMailForm()">Ajouter un nouveau courrier</button>
+                <table id="adminMailTable">
+                    <tr>
+                        <th>Objet</th>
+                        <th>Reçu le</th>
+                        <th>Service</th>
+                        <th>Expéditeur / Destinataire</th>
+                        <th>Nature</th>
+                        <th>Actions</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Section Utilisateur -->
+        <div id="user" class="section">
+            <div class="sidebar">
+                <h4>Menu Utilisateur</h4>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Voir les courriers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Courriers archivés</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-danger" href="#" onclick="logout()">Se Déconnecter</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="content">
+                <h1 id="welcomeuser">Bienvenue Utilisateur</h1>
+                <p>Contenu pour l'utilisateur standard</p>
+            </div>
+        </div>
+
+        <!-- Section Secrétaire -->
+        <div id="secretary" class="section">
+            <div class="sidebar">
+                <h4>Menu Secrétaire</h4>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showAddMailForm()">Ajouter un nouveau courrier</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Boîte de réception</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Courriers affectés</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('manageUsers')">Gérer les utilisateurs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-danger" href="#" onclick="logout()">Se Déconnecter</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="content">
+                <h1 id="welcomeSecretary">Bienvenue, Secrétaire</h1>
+                <button class="btn btn-primary" onclick="showAddMailForm()">Ajouter un nouveau courrier</button>
+                <table id="secretaryMailTable">
+                    <tr>
+                        <th>Objet</th>
+                        <th>Reçu le</th>
+                        <th>Service</th>
+                        <th>Expéditeur / Destinataire</th>
+                        <th>Nature</th>
+                        <th>Actions</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Section Ajouter un courrier -->
+        <div id="addMailForm" class="section">
+            <h2>Ajouter un nouveau courrier</h2>
+            <form onsubmit="addMail(event)">
+                <div class="form-group">
+                    <label for="mailObject">Objet du courrier:</label>
+                    <input type="text" class="form-control" id="mailObject" required>
+                </div>
+                <div class="form-group">
+                    <label for="receivedDate">Date de réception:</label>
+                    <input type="date" class="form-control" id="receivedDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="service">Service:</label>
+                    <input type="text" class="form-control" id="service" required>
+                </div>
+                <div class="form-group">
+                    <label for="senderReceiver">Expéditeur / Destinataire:</label>
+                    <input type="text" class="form-control" id="senderReceiver" required>
+                </div>
+                <div class="form-group">
+                    <label for="nature">Nature du courrier:</label>
+                    <input type="text" class="form-control" id="nature" required>
+                </div>
+                <button type="submit" class="btn btn-success">Ajouter</button>
+                <button type="button" class="btn btn-secondary" onclick="showSection('admin')">Annuler</button>
+            </form>
+        </div>
+
+        <!-- Section Courriers Archivés -->
+        <div id="archive" class="section">
+            <h2>Courriers Archivés</h2>
+            <table id="archiveMailTable">
+                <tr>
+                    <th>Objet</th>
+                    <th>Reçu le</th>
+                    <th>Service</th>
+                    <th>Expéditeur / Destinataire</th>
+                    <th>Nature</th>
+                    <th>Actions</th>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Section Gestion des Utilisateurs -->
+        <div id="manageUsers" class="section">
+            <h2>Gérer les utilisateurs</h2>
+            <table id="userTable" class="table table-striped">
+                <tr>
+                    <th>Nom d'utilisateur</th>
+                    <th>Rôle</th>
+                    <th>Actions</th>
+                </tr>
+            </table>
+            <button class="btn btn-secondary" onclick="showSection('admin')">Retour</button>
+        </div>
+
+        <!-- Section Ajouter un Utilisateur -->
+        <div id="addUserForm" class="section">
+            <h2>Ajouter un nouvel utilisateur</h2>
+            <form onsubmit="addUser(event)">
+                <div class="form-group">
+                    <label for="newUsername">Nom d'utilisateur:</label>
+                    <input type="text" class="form-control" id="newUsername" required>
+                </div>
+                <div class="form-group">
+                    <label for="newUserRole">Rôle:</label>
+                    <select class="form-control" id="newUserRole">
+            <option>Admin</option>
+            <option>Utilisateur</option>
+            <option>Secrétaire</option>
+          </select>
+                </div>
+                <div class="form-group">
+                    <label for="newUserPassword">Mot de passe:</label>
+                    <input type="password" class="form-control" id="newUserPassword" required>
+                </div>
+                <button type="submit" class="btn btn-success">Ajouter</button>
+                <button type="button" class="btn btn-secondary" onclick="showSection('admin')">Annuler</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 InOut . Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Lien vers le fichier JavaScript externe -->
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
