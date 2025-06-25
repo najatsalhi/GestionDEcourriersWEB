@@ -1,0 +1,7 @@
+services:
+  gestion-courriers:
+    build: .
+    ports:
+      - "8080:80"
+    container_name: gestion-courriers-app
+    restart: unless-stopped

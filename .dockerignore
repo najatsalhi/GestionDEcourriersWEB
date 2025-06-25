@@ -1,0 +1,13 @@
+# Fichiers et dossiers à ignorer lors de la construction de l'image Docker
+node_modules
+npm-debug.log
+Dockerfile
+.dockerignore
+.git
+.gitignore
+README.md
+.env
+.nyc_output
+coverage
+.vscode
+.idea
